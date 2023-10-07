@@ -36,7 +36,7 @@ h1 {
 }
 .active {
     text-decoration: underline;
-    text-decoration-color: darkgreen;
+    background-color: darkgreen;
     text-underline-offset: 4px;
     
 }
