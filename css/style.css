@@ -1,8 +1,14 @@
-
+:root{
+    --blue: #006e3d;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
 
 
 body {
     font-family: 'Nunito', sans-serif;
+    font-size: 1,2rem;
+    min-height: 2000px;
 }
 
 marquee {
@@ -19,8 +25,9 @@ marquee {
     justify-content: center;
 }
 
-span {
+span , u {
     color: darkgreen;
+    text-shadow: var(--shadow);
 }
 
 .nav, .navbar-brand  {
@@ -80,6 +87,9 @@ html {
     .text-bg-success {
         text-align: center;
     }
+    .simply-countdown > .simply-section {
+        padding: 70px;
+    }
 }
 /* media tab*/
 @media (max-width: 768px){
@@ -92,7 +102,10 @@ html {
     .active .text-underline-offset {
         display: none;
     }
-
+    .simply-countdown > .simply-section {
+        padding: 50px;
+        margin: 5px;
+    }
 }
 /* media hp */
 @media (max-width: 576px){
@@ -102,5 +115,13 @@ html {
     .text-bg-success {
         text-align: center;
         }
-
+        .col-4 > .simply-countdown  {
+            height: 50px;
+            width: 500px;
+        }
+        .col-4 img {
+            height: 50px;
+            width: 200px;
+            margin-top: 22px;
+        }
     }

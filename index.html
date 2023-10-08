@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" 
 rel="stylesheet">
+<link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
+<script src="countdown/simplyCountdown.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 </style>
@@ -115,6 +117,7 @@ rel="stylesheet">
   <p class="d-inline-flex gap-3 col-12">
     <a class="btn btn-light w-100 bi bi-receipt-cutoff" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> DAPATKAN GRATIS ONGKOS KIRIM</a>
     <button class="btn btn-light w-100 bi bi-truck" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"> PENGIRIMAN INSTANT</button>
+    <button class="btn btn-light w-100 bi bi-truck" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample2"> PROMO KILAT DISC. s/d 50%</button>
   </p>
   <div class="row" style="text-align: justify;">
     <div class="col pb-2">
@@ -131,13 +134,20 @@ rel="stylesheet">
         </div>
       </div>
     </div>
+    <div class="col pb-2">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="card card-body w-100 alert alert-info pb-3">
+          Nantikan PROMO KILAT Khusus di jam jam tertentu, dijamin discount s/d 50 %, pantengin terus di AlvaqiMart
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- akhir kategori -->
-  <div class="container text-center">
+  <div class="container text-center">   <hr/>
     <h5 style="color: darkgreen; font-family: 'Poppins', sans-serif;"><u>KATEGORI</u></h5>
-    <h5><hr/></h5>
+ 
     <div class="container text-center">
     </div>
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pb-4 pt-4">
@@ -157,7 +167,7 @@ rel="stylesheet">
         <a href="sembako.html"><div class="p-3 bg-body-secondary"style="border-radius: 50%;"><img src="img/sembako/kategori/ktcantik.png" alt=""><p>KECANTIKAN & KEBUGARAN</p></div></a>
       </div>
       <div class="col">
-        <a href="sembako.html"><div class="p-3 bg-body-secondary"style="border-radius: 50%;"><img src="img/sembako/kategori/ktins.png" alt=""><p>SNACK / MAKANAN RINGAN</p></div></a>
+        <a href="sembako.html"><div class="p-3 bg-body-secondary"style="border-radius: 50%;"><img src="img/sembako/kategori/ktins.png" alt=""><p>ICE CREAM, SNACK / MAKANAN RINGAN</p></div></a>
       </div>
       <div class="col">
         <a href="sembako.html"><div class="p-3 bg-body-secondary"style="border-radius: 50%;"><img src="img/sembako/kategori/ktobat.png" alt=""><p>SUPLEMEN, VITAMIN & OBAT - OBATAN </p></div></a>
@@ -174,15 +184,16 @@ rel="stylesheet">
     </div>
   </div>
 <!-- flash sale -->
-<div class="container-fluid">
-  <h5 class="card-body h3 bg-dark"><span class="text-light p-3"> AlvaqiMart Flash Sale -- Berakhir dalam <div class="btn btn-light"> </div></span></h5>
-
-
-
-  </div>
-</div>
 <!-- end flash sale -->
-
+<div class="container-fluid text-center">
+  <div class="row justify-content-start">
+    <div class="col-4">
+      <img src="img/sembako/kategori/fs.png" alt="">
+    </div>
+    <div class="col-4 pb-3">
+      <div class="simply-countdown"> 
+    </div>
+  </div>
 
 
 
@@ -211,6 +222,20 @@ rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+<script>
+  simplyCountdown('.simply-countdown',{
+      year: 2023, // required
+          month: 12, // required
+          day: 28, // required
+          hours: 8, // Default is 0 [0-23] integer
+        utes: 0, // Default is 0 [0-59] integer
+          seconds: 0, // Default is 0 [0-59] integer
+          words: { //words displayed into the countdown
+              days: { singular: ' ', plural: ' ' },
+              hours: { singular: ' ', plural: ' ' },
+              minutes: { singular: ' ', plural: ' ' },
+              seconds: { singular: ' ', plural: ' ' }
+          },});
+</script>
     </body>
 </html>
