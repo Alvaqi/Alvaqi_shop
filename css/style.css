@@ -67,7 +67,7 @@ a i, marquee {
 }
 
 .col {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .col a:hover {
@@ -75,6 +75,70 @@ a i, marquee {
     text-decoration: bold;
     font-family: 'Poppins', sans-serif;
 }
+
+.row .col .card:hover {
+    box-shadow: var(--shadow);
+}
+
+.card-text {
+    font-size: large;
+    color: darkgreen;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-footer:hover {
+    color: rgb(250, 255, 250);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -124,6 +188,9 @@ html {
             height: 50px;
             width: 70px;
             margin-top: 22px;
+        }
+        .sticky-bottom {
+            overflow: hidden;
         }
 
     }
