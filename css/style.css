@@ -75,12 +75,21 @@ a i, marquee {
     text-decoration: bold;
     font-family: 'Poppins', sans-serif;
 }
+.col .card a:hover {
+    color: rgb(248, 249, 248);
+    text-decoration: bold;
+    font-family: 'Poppins', sans-serif;
+    background: darkgreen;
+    .card-text {
+        color: rgb(248, 249, 248);
+    }
+}
 
 .row .col .card:hover {
     box-shadow: var(--shadow);
 }
 
-.card-text {
+.col .card-text {
     font-size: large;
     color: darkgreen;
     font-family: 'Poppins', sans-serif;
@@ -91,10 +100,14 @@ a i, marquee {
     font-family: 'Poppins', sans-serif;
 }
 
+.container .progress-bar {
+    color: #fffefe;
+    font-size: 1rem;
+}
 
-
-
-
+.progress {
+   height: 2rem;
+}
 
 
 
@@ -169,12 +182,21 @@ html {
     }
     .active .text-underline-offset {
         display: none;
-    }
-    .simply-countdown > .simply-section {
-        padding: 50px;
-        margin: 5px;
-    }
-}
+    }    }
+    .text-bg-success {
+        text-align: center;
+        }
+        
+        .sticky-bottom {
+            overflow: hidden;
+        }
+        .clock-container img {
+            width: 130px;
+        }
+        .clock-container  #countdown {
+            size: 2px;;
+        }
+
 /* media hp */
 @media (max-width: 576px){
     html {
@@ -187,5 +209,10 @@ html {
         .sticky-bottom {
             overflow: hidden;
         }
-
+        .clock-container img {
+            width: 130px;
+        }
+        .clock-container  #countdown {
+            size: 2px;;
+        }
     }
