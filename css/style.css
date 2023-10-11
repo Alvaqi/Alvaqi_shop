@@ -184,11 +184,6 @@ html {
         text-align: center;
         }
         
-        .row {
-            height: 50px;
-            width: 70px;
-            margin-top: 22px;
-        }
         .sticky-bottom {
             overflow: hidden;
         }
