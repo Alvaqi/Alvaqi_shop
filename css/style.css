@@ -6,7 +6,7 @@
 
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-height: 2000px;
 }
 
@@ -73,18 +73,17 @@ a i, marquee {
     text-align:center;
 }
 
-.col a:hover {
+.col a p:hover {
     color: darkgreen;
     text-decoration: bold;
     font-family: 'Poppins', sans-serif;
 }
 .col .card a:hover {
-    color: rgb(248, 249, 248);
+    color: darkgreen;
     text-decoration: bold;
-    font-family: 'Poppins', sans-serif;
-    background: darkgreen;
     .card-text {
-        color: rgb(248, 249, 248);
+        color: darkgreen;
+
     }
 }
 
@@ -220,5 +219,8 @@ html {
         }
         .col iframe {
         width: 100%;
+        }
+        #clock {
+font-size: 2px;
         }
     }

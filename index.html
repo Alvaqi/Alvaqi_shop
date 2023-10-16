@@ -16,12 +16,15 @@ rel="stylesheet">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <style>
 /* CountDown */
-.clock-container{background:#fcfcfcf4;position:relative;padding:10px}
+.clock-container{background:#fcfcfcf4;position:relative;padding:1px}
 .batas-promo{float:left;padding:3px;font-size:20px;font-weight:700;color:#03823e;margin-top:0;}
 .icon-batas-promo{float:left;padding:0 5px;margin-top:0}
-#countdown {margin:0 auto;display:block;position:relative;height:40px}
+#countdown {margin:0 auto;display:block;position:relative;height:30px}
 #countdown p{color:#555555;text-align:center;font-size:30px;padding:20px;line-height:1;}
 #clock span {float:left;text-align:center;font-size:20px;margin:0 5px;color: #ffffff;padding:5px;width:40px;border-radius:5px;box-sizing:border-box;}
 #clock span:nth-child(1) {background:#017513;}
@@ -29,24 +32,37 @@ rel="stylesheet">
 #clock span:nth-child(3) {background:#017513;}
 #clock span:nth-child(4) {background:#017513;color:#ffffff;}
 #clock:after {content:&quot;&quot;;display:block;clear:both;}
-#units span {float:none;width:40px;text-align:center;margin:0;color:#55555;padding:5px;box-sizing:border-box;letter-spacing:1px;}
+#units span {float:none;width:40px;text-align:center;margin:0;color:#030303;padding:5px;box-sizing:border-box;letter-spacing:1px;}
 @media (max-width: 640px) {#countdown{width:100%;margin:0 auto;}#units span{font-size:12px;}.batas-promo{float:none}}
 @media (max-width: 360px) {#countdown{width:100%;margin:0 auto;}#countdown span{font-size:20px;}#units span,#countdown p{font-size:18px;}}
-
-  </style>
+</style>
+<style>
+html {
+scroll-behavior: smooth;}
+#top a {
+padding: 1rem;
+color: darkgreen;
+position: fixed;
+right: 1rem;
+bottom: 1rem;
+}
+#top a:hover {
+color: #030303;
+}
+</style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container-fluid">
-      <span class="navbar-text">
-        <marquee behavior="" direction="" >Alamat: Jalan Raya Payakumbuh - Gadut Kilometer 20, Sumatera Barat</marquee>
-      </span>
+  <nav class="navbar" id="header">
+    <div class="container">
+        <div class="col-12"></div>
       <a href=""><i class="fa fa-facebook-square"> alvaqiMartMungo </i> </a>
       <a href=""><i class="fa fa-instagram" aria-hidden="true"> @alvaqiMart </i></a>
       <a href=""><i class="fa fa-envelope" aria-hidden="true"> alvaqimart@gmail.com</i></a>
       <a href=""><i class="fa fa-phone-square" aria-hidden="true"> 0821 2454 2921</i></a>
+    </div>
+    <marquee behavior="" direction="" >Alamat: Jalan Raya Payakumbuh - Gadut Kilometer 20, Kenagarian Mungo Kecamatan Luhak, Kabupaten Lima Puluh Kota, Sumatera Barat</marquee>
   </nav>
-    <nav class="navbar navbar-expand-md bg-white sticky-top">
+    <nav class="shadow navbar navbar-expand-md bg-white sticky-top">
      <div class="container-fluid bg-white">
       <a class="navbar-brand" href="#">
         <img src="img/logoku11.png" alt="Logo" width="70" height="44" class="d-inline-block align-text-center">
@@ -69,26 +85,19 @@ rel="stylesheet">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"><i class="fa fa-home"></i> Beranda</a>
+                <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home"></i> Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-tag"></i> Promo</a>
+                <a class="nav-link" href="promo.html"><i class="fa fa-tag"></i> Promo</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-archive-fill"></i>
-                 Produk
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Makanan Segar</a></li>
-                  <li><a class="dropdown-item" href="#">Makanan Dan Minuman</a></li>
-                  <li><a class="dropdown-item" href="#">Produk Bayi Dan Anak</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="produk.html"><i class="fa fa-shopping-bag"></i> Produk</a>
               </li>
               <li class="nav-item pe-2">
-                <a class="nav-link" href="#"><i class="bi bi-telephone-inbound-fill"></i> Pengaduan</a>
+                <a class="nav-link" href="tentangkami.html"><i class="bi bi-telephone-inbound-fill"></i> Tentang Kami</a>
               </li>
               <li class="nav-item">
-              <a href="login.html" class="btn btn-primary w-auto" aria-hidden="true"><i class="bi bi-box-arrow-in-right"> Login</i></a>
+              <a href="login/sign.html" class="btn btn-primary w-auto" aria-hidden="true"><i class="bi bi-box-arrow-in-right"></i> Login</a>
             </li>
             </ul>
           </div>
@@ -98,39 +107,34 @@ rel="stylesheet">
   </nav>
 <!-- batas navbar -->
 <div class="container-fluid">
-  <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="img/logoku15.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="img/bg3.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
       <img src="img/bg2.jpg" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="img/bg3.jpg" class="d-block w-100" alt="...">
+    </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div></div>
 <!-- Batas caraousal -->
 <!-- Kategori -->
 <div class="container-fluid">
   <p class="d-inline-flex gap-3 col-12">
     <a class="btn btn-light w-100 bi bi-receipt-cutoff" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> DAPATKAN GRATIS ONGKOS KIRIM</a>
     <button class="btn btn-light w-100 bi bi-truck" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"> PENGIRIMAN INSTANT</button>
-    <button class="btn btn-light w-100 bi bi-truck" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample2"> PROMO KILAT DISC. s/d 50%</button>
+    <button class="btn btn-light w-100 bi bi-cash-coin" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample2"> PROMO KILAT DISC. s/d 50%</button>
   </p>
   <div class="row" style="text-align: justify;">
     <div class="col pb-2">
@@ -156,10 +160,50 @@ rel="stylesheet">
     </div>
   </div>
 </div>
+<!-- carousal2 -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/produk/slide1.jpg" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="img/produk/slide2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/produk/slide4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="col" >
+  <img src="img/produk/slide3.jpg" alt=""  style="width: 100%; height: 100%;">
+  </div>
+</div>
+</div>
+<!-- end carousal 2 -->
+
 
 <!-- akhir kategori -->
-  <div class="container text-center">  
-    <h5 style="color: darkgreen; font-family: 'Poppins', sans-serif;"><u>KATEGORI</u></h5>
+  <div class="container text-center pt-4">  
+    <h5 style="color: darkgreen; font-family: 'Roboto', sans-serif;">KATEGORI
+      <center><div style="width: 20%;"><hr/></div></center>
+    </h5>    
     <div class="container">
     <div class="container text-center">
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pb-4 pt-4">
@@ -198,11 +242,14 @@ rel="stylesheet">
 </div> 
 </div> 
 </div> 
+<div class="container-fluid p-3">
+  <div class="justify-content-center"style="background: darkgreen; color:white; text-align:center;"><h5>Jam Operational Belanja Online di ALVAQI MART Adalah Dari Jam 08.00 - 17.00 W.I.B <br><span class="bg-danger text-light"> <i class="bi bi-basket-fill"></i> BERBELANJA DI LUAR JAM TERSEBUT AKAN DIPROSES PADA ESOK HARI <i class="bi bi-basket-fill"></span></i><br>- SELAMAT BERBELANJA -</h5>
+</div>
 <!-- flash salee -->
-
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
     <div class="clock-container align-items-center">
-  <img alt='Flash Sale' class='icon-batas-promo' height='50px' src='img/sembako/kategori/fs.png' width='200px'>
+
+<img alt='Flash Sale' class='icon-batas-promo' height='50px' src='img/sembako/kategori/fs.png' width='200px'>
   <div id='countdown'>
   <div id='clock'>
   <!--<div id='units'>
@@ -220,12 +267,182 @@ rel="stylesheet">
       startTimer("clock", deadline)
   };
   // Ganti tahun bulan tanggal dan jam sesuai dengan batas promo
-  
   </script>
   </div>
-</div>
+  <p></p>
+<div style="width: 35%;"><hr/></div>
 <div class="container-fluid text-center pt-2">
 <div class="row row-cols-3 pb-3 row-cols-md-5">
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color:  darkgreen;"></i>
+        <i class="bi bi-star-half" style="color:  darkgreen;"></i>
+        <i class="bi bi-star" style="color:  darkgreen;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cash"></i> Tambahkan</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color:  darkgreen;"></i>
+        <i class="bi bi-star-half" style="color:  darkgreen;"></i>
+        <i class="bi bi-star" style="color:  darkgreen;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cart-plus-fill"></i> Masuk Troli</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color:  darkgreen;"></i>
+        <i class="bi bi-star-half" style="color:  darkgreen;"></i>
+        <i class="bi bi-star" style="color:  darkgreen;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cash"></i> Tambahkan</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color:  darkgreen;"></i>
+        <i class="bi bi-star-half" style="color:  darkgreen;"></i>
+        <i class="bi bi-star" style="color:  darkgreen;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cash"></i> Tambahkan</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color: darkgreen;"></i>
+        <i class="bi bi-star-fill" style="color:  darkgreen;"></i>
+        <i class="bi bi-star-half" style="color:  darkgreen;"></i>
+        <i class="bi bi-star" style="color:  darkgreen;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cash"></i> Tambahkan</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bawang Merah</h5>
+        <p class="card-text text-bg-light"><s>Rp 15.000,-</s></p>
+        <p class="card-text">Rp 13.000,-</p>
+        <i class="bi bi-star-fill" style="color: black;"></i>
+        <i class="bi bi-star-fill" style="color: black;"></i>
+        <i class="bi bi-star-fill" style="color: black;"></i>
+        <i class="bi bi-star-half" style="color: black;"></i>
+        <i class="bi bi-star" style="color: black;"></i><i class="" style="color: #030303;"></i>(4.2)
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 70%"> 70 Terjual</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+        <div class="btn btn-dark"><i class="bi bi-cash"></i> Tambahkan</div>
+      </div>
+      </div></a>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
+
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img src="img/sembako/kategori/Screenshot_2.jpg" style="width: 100%;" alt="">
+    </div>
+    <div class="col">
+      <img src="img/sembako/kategori/Screenshot_2.jpg" style="width: 100%;" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="pt-4">
+<center>
+<h5 style="color: darkgreen; font-family: 'Roboto', sans-serif;">PRODUK TERLARIS
+<div style="width: 20%;"><hr/></div></center>
+</h5> </div>
+<div class="container-fluid text-center pt-2">
+<div class="row row-cols-3 pb-3 row-cols-md-6">
   <div class="col">
     <a href=""><div class="card h-100">
       <img src="img/flash/bawang.jpeg" class="card-img-top" alt="...">
@@ -236,7 +453,7 @@ rel="stylesheet">
       </div>
       <div class="card-footer">
         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar overflow-visible text-dark" style="width: 75%">75 Terjual</div>
+          <div class="progress-bar overflow-visible text-light" style="width: 75%">75 Terjual</div>
         </div>
       </div></a>
     </div>
@@ -251,7 +468,7 @@ rel="stylesheet">
       </div>
       <div class="card-footer">
         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar overflow-visible text-dark" style="width: 30%">30 Terjual</div>
+          <div class="progress-bar overflow-visible text-light" style="width: 30%">30 Terjual</div>
         </div>
       </div></a>
     </div>
@@ -266,7 +483,7 @@ rel="stylesheet">
       </div>
       <div class="card-footer">
         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar overflow-visible text-dark" style="width: 50%">50 Terjual</div>
+          <div class="progress-bar overflow-visible text-light" style="width: 50%">50 Terjual</div>
         </div>
       </div></a>
     </div>
@@ -281,7 +498,143 @@ rel="stylesheet">
       </div>
       <div class="card-footer">
         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar overflow-visible text-dark" style="width: 45%">45 Terjual</div>
+          <div class="progress-bar overflow-visible text-light" style="width: 45%">45 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/tomat.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tomat Merah 500 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 17.500,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 30%">30 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/rawit.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rawit Hijau 1000 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 20.000,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 50%">50 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bayam.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bayam Segar 1 (Satu) Ikat</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 1.500,-</s></p>
+        <p class="card-text">Rp 1.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 45%">45 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/tomat.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tomat Merah 500 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 17.500,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 30%">30 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/rawit.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rawit Hijau 1000 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 20.000,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 50%">50 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bayam.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bayam Segar 1 (Satu) Ikat</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 1.500,-</s></p>
+        <p class="card-text">Rp 1.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 45%">45 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/tomat.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tomat Merah 500 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 17.500,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 30%">30 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/rawit.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rawit Hijau 1000 Gram</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 20.000,-</s></p>
+        <p class="card-text">Rp 15.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 50%">50 Terjual</div>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div class="col">
+    <a href=""><div class="card h-100">
+      <img src="img/flash/bayam.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bayam Segar 1 (Satu) Ikat</h5>
+        <p class="card-text bg-danger text-bg-light"><s>Rp 1.500,-</s></p>
+        <p class="card-text">Rp 1.000,-</p>
+      </div>
+      <div class="card-footer">
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar overflow-visible text-light" style="width: 45%">45 Terjual</div>
         </div>
       </div></a>
     </div>
@@ -296,24 +649,86 @@ rel="stylesheet">
       </div>
       <div class="card-footer">
         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar overflow-visible text-dark" style="width: 90%">90 Terjual</div>
+          <div class="progress-bar overflow-visible text-light" style="width: 90%">90 Terjual</div>
         </div>
       </div></a>
     </div>
   </div>
 </div>
-  <!-- program penjualan -->
-  <div class="card mb-3">
-    <img src="img/bg2.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- program penjualan -->
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container-fluid">
@@ -324,71 +739,7 @@ rel="stylesheet">
           style="background-color: #1c2331"
           >
     <!-- Section: Social media -->
-    <section
-             class="d-flex justify-content-between p-2"
-             style="background-color: darkgreen"
-             >
-      <!-- Left -->
-      <div class="me-5">
-        <p>Get connected with us on social networks:</p>
-      </div>
-      <!-- Left -->
 
-      <!-- Right -->
-      <div>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fa fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-2">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold">AlvaqiMart</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: darkgreen; height: 2px"
-                />
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-<div class="col text-center">
-  <iframe src="https://www.google.com/maps/embed?pb=!4v1697011236618!6m8!1m7!1skoOUdNR6RnRaUFBYgZPgGw!2m2!1d-0.2339977006507646!2d100.6997170460842!3f214.05167!4f0!5f0.7820865974627469" width="550" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
 
     <!-- Copyright -->
     <div
@@ -396,9 +747,8 @@ rel="stylesheet">
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
       © 2023 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"
-         >AlvaqiMART Mungo</a
-        >
+      <a class="text-white" href="ISTIQLAL"
+         >AlvaqiMART Mungo</a><vr/> All rights reserved.
     </div>
     <!-- Copyright -->
   </footer>
@@ -406,100 +756,6 @@ rel="stylesheet">
 
 </div>
 <!-- End of .container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -561,5 +817,12 @@ rel="stylesheet">
 
 
   </script>
+
+
+<div id="top"><a href="#header">
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-up-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 8.354a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 6.207V11a.5.5 0 0 1-1 0V6.207L5.354 8.354z"/>
+</svg>
+</a></div>
     </body>
 </html>
