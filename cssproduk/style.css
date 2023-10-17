@@ -1,0 +1,42 @@
+
+.col .card-title {
+    text-align:center;
+}
+
+.col a p:hover {
+    color: darkgreen;
+    text-decoration: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.col .card a:hover {
+    color: darkgreen;
+    text-decoration: bold;
+    .card-text {
+        color: darkgreen;
+
+    }
+}
+
+.row .col .card:hover {
+    box-shadow: var(--shadow);
+}
+
+.col .card-text {
+    font-size: large;
+    color: darkgreen;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-footer:hover {
+    color: rgb(250, 255, 250);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-footer .progress-bar {
+    color: #fffefe;
+    font-size: 1rem;
+}
+
+.progress {
+   height: 2rem;
+}

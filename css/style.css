@@ -17,7 +17,7 @@ marquee {
 
 
 .btn {
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s;
+/*aktifkan untuk delai warna btn transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s; */
     display: inline-block;
     justify-content: center;
 }
@@ -64,6 +64,22 @@ a i, marquee {
     text-decoration: none;
 }
 
+.nav-iteem a:hover {
+ color: white !important;
+ .bi{
+    color: white !important;
+ }
+}
+
+.btn i:hover {
+    color: white !important;
+}
+
+
+
+
+
+
 .col {
     padding-bottom: 10px;
 }
@@ -73,11 +89,13 @@ a i, marquee {
     text-align:center;
 }
 
-.col a p:hover {
-    color: darkgreen;
+.container .row .col a .p-3:hover{
+    background-color: #006e3d !important;
+    color: rgb(255, 255, 255);
     text-decoration: bold;
     font-family: 'Poppins', sans-serif;
 }
+
 .col .card a:hover {
     color: darkgreen;
     text-decoration: bold;
@@ -221,6 +239,7 @@ html {
         width: 100%;
         }
         #clock {
-font-size: 2px;
+        font-size: 2px;
         }
+
     }
